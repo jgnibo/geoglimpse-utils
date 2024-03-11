@@ -39,7 +39,7 @@ def create_hex_grid(geojson_boundary, hex_size):
             grid_cells.append(hexagon)
             x += horiz_dist
 
-        y_min += vert_dist * 0.75 
+        y_min += vert_dist  # Adjust this line
         row_num += 1
 
     grid = gpd.GeoDataFrame({'geometry': grid_cells}, crs=utm_crs)
